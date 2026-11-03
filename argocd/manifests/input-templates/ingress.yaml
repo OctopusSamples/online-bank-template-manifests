@@ -14,7 +14,7 @@ spec:
 #        - online-bank.example.com
       #secretName: online-bank-tls
   rules:
-    - host: online-bank.example.com
+    - host: #{Project.Host.Name}
       http:
         paths:
           - path: /
