@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: online-bank
+  name: online-bank-qa
   labels:
     app.kubernetes.io/name: online-bank
   annotations:

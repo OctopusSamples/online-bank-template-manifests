@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: online-bank
+  name: online-bank-staging
   labels:
     app.kubernetes.io/name: online-bank
   annotations:
@@ -14,7 +14,7 @@ spec:
         - online-bank.staging.example.com
       #secretName: online-bank-tls
   rules:
-    - host: online-bank.example.com
+    - host: online-bank.staging.example.com
       http:
         paths:
           - path: /
