@@ -29,7 +29,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: online-bank
-          image: #{Octopus.Action.Package[online-bank].Registry}/#{Octopus.Action.Package[online-bank].PackageId}:#{Octopus.Action.Package[online-bank].PackageVersion}
+          image: #{Octopus.Action.Package[online-bank-template].Registry}/#{Octopus.Action.Package[online-bank-template].PackageId}:#{Octopus.Action.Package[online-bank-template].PackageVersion}
           imagePullPolicy: Always
           ports:
             - name: http
