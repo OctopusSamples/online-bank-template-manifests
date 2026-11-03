@@ -29,7 +29,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: online-bank
-          image: ghcr.io/octopussamples/online-bank-template:latest
+          image: #{Octopus.Action.Package[online-bank].Registry}/#{Octopus.Action.Package[online-bank].PackageId}:#{Octopus.Action.Package[online-bank].PackageVersion}
           imagePullPolicy: Always
           ports:
             - name: http
