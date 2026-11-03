@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: online-bank
+  name: online-bank-staging
   labels:
-    app.kubernetes.io/name: online-bank
+    app.kubernetes.io/name: online-bank-staging
 spec:
   type: ClusterIP
   selector:
-    app.kubernetes.io/name: online-bank
+    app.kubernetes.io/name: online-bank-staging
   ports:
     - name: http
       port: 80

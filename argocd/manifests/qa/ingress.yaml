@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: online-bank-qa
   labels:
-    app.kubernetes.io/name: online-bank
+    app.kubernetes.io/name: online-bank-qa
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
     nginx.ingress.kubernetes.io/proxy-body-size: 1m
@@ -21,6 +21,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: online-bank
+                name: online-bank-qa
                 port:
                   name: http
