@@ -9,9 +9,9 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-body-size: 1m
 spec:
   ingressClassName: nginx
-  tls:
-    - hosts:
-        - online-bank.qa.example.com
+#  tls:
+#    - hosts:
+#        - online-bank.qa.example.com
       #secretName: online-bank-tls
   rules:
     - host: online-bank.qa.example.com
