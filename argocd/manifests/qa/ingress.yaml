@@ -11,10 +11,10 @@ spec:
   ingressClassName: nginx
 #  tls:
 #    - hosts:
-#        - online-bank.qa.example.com
+#        - online-bank.example.com
       #secretName: online-bank-tls
   rules:
-    - host: online-bank.qa.example.com
+    - host: online-bank.example.com
       http:
         paths:
           - path: /
