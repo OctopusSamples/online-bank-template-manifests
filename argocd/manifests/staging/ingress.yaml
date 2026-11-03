@@ -11,7 +11,7 @@ spec:
   ingressClassName: nginx
 #  tls:
 #    - hosts:
-#        - online-bank.staging.example.com
+#        - online-bank.example.com
       #secretName: online-bank-tls
   rules:
     - host: online-bank.staging.example.com
