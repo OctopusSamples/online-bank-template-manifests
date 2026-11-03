@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: online-bank
+  name: online-bank-qa
   labels:
-    app.kubernetes.io/name: online-bank
+    app.kubernetes.io/name: online-bank-qa
 spec:
   # SQLite on a ReadWriteOnce volume supports a single writer only; do not scale above 1.
   replicas: 1
