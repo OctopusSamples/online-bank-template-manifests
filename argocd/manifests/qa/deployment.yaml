@@ -15,7 +15,7 @@ spec:
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: online-bank
+        app.kubernetes.io/name: online-bank-qa
     spec:
       imagePullSecrets:
         - name: ghcr-pull-secret    
