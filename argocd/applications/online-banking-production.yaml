@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: online-banking-production
+  namespace: argocd
+  annotations:
+    argo.octopus.com/project: "online-bank-template"
+    argo.octopus.com/environment: "production"  
+spec:
+  project: shipped26
+  source:
+    repoURL: https://github.com/OctopusSamples/online-bank-template-manifests.git
+    targetRevision: HEAD
+    path: argocd/manifests/production
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: online-bank-production
+  syncPolicy:
+#    automated: 
+#      prune: true
+#      selfHeal: true
+    syncOptions:
+    - Validate=false
+    - CreateNamespace=true
