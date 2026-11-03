@@ -11,7 +11,7 @@ spec:
     type: Recreate
   selector:
     matchLabels:
-      app.kubernetes.io/name: online-bank
+      app.kubernetes.io/name: online-bank-qa
   template:
     metadata:
       labels:
