@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: online-bank-qa
   labels:
-    app.kubernetes.io/name: online-bank
+    app.kubernetes.io/name: online-bank-qa
 spec:
   type: ClusterIP
   selector:

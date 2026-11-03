@@ -3,9 +3,9 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: online-bank-data
+  name: online-bank-data-production
   labels:
-    app.kubernetes.io/name: online-bank
+    app.kubernetes.io/name: online-bank-production
 spec:
   accessModes:
     - ReadWriteOnce

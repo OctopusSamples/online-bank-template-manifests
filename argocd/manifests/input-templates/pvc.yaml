@@ -3,9 +3,9 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: online-bank-data
+  name: online-bank-data-#{Octopus.Environment.Name | ToLower}
   labels:
-    app.kubernetes.io/name: online-bank
+    app.kubernetes.io/name: online-bank-#{Octopus.Environment.Name | ToLower}
 spec:
   accessModes:
     - ReadWriteOnce

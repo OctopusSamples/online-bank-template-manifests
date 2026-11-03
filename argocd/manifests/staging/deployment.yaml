@@ -96,6 +96,6 @@ spec:
       volumes:
         - name: data
           persistentVolumeClaim:
-            claimName: online-bank-data
+            claimName: online-bank-data-staging
         - name: tmp
           emptyDir: {}
