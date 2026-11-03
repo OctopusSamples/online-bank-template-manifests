@@ -29,7 +29,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: online-bank
-          image: ghcr.io/octopussamples/online-bank-template:sha256-f97df7c37eaf5929386de5488561a4e370f8251110fd8c6f06e90efa4fd799d9
+          image: ghcr.io/octopussamples/online-bank-template:sha-6ce2ee90b2dda4ed81a79b79381df362a7315cdf
           imagePullPolicy: Always
           ports:
             - name: http
