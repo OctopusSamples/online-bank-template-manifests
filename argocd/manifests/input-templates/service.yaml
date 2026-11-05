@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: online-bank-#{Octopus.Environment.Name | ToLower}
+  name: online-bank-#{Project.Environment.Name}
   labels:
-    app.kubernetes.io/name: online-bank-#{Octopus.Environment.Name | ToLower}
+    app.kubernetes.io/name: online-bank-#{Project.Environment.Name}
 spec:
   type: ClusterIP
   selector:
-    app.kubernetes.io/name: online-bank-#{Octopus.Environment.Name | ToLower}
+    app.kubernetes.io/name: online-bank-#{Project.Environment.Name}
   ports:
     - name: http
       port: 80
