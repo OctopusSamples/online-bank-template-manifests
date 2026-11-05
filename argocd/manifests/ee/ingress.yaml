@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: online-bank-ee
+  labels:
+    app.kubernetes.io/name: online-bank-ee
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: 1m
+spec:
+  ingressClassName: nginx
+#  tls:
+#    - hosts:
+#        - online-bank.example.com
+      #secretName: online-bank-tls
+  rules:
+    - host: online-bank.ee.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: online-bank-ee
+                port:
+                  name: http

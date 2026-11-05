@@ -1,0 +1,14 @@
+# Persistent storage for /app/data: SQLite databases, Data Protection keys and the email outbox.
+# Required by the deployment; without it all accounts and sign-in keys are lost on pod restart.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: online-bank-data-ee
+  labels:
+    app.kubernetes.io/name: online-bank-ee
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi

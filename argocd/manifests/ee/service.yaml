@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: online-bank-ee
+  labels:
+    app.kubernetes.io/name: online-bank-ee
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: online-bank-ee
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+      protocol: TCP
