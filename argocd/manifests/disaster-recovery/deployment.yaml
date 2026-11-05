@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: online-bank-disaster recovery
+  name: online-bank-disaster-recovery
   labels:
-    app.kubernetes.io/name: online-bank-disaster recovery
+    app.kubernetes.io/name: online-bank-disaster-recovery
 spec:
   # SQLite on a ReadWriteOnce volume supports a single writer only; do not scale above 1.
   replicas: 1
@@ -11,11 +11,11 @@ spec:
     type: Recreate
   selector:
     matchLabels:
-      app.kubernetes.io/name: online-bank-disaster recovery
+      app.kubernetes.io/name: online-bank-disaster-recovery
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: online-bank-disaster recovery
+        app.kubernetes.io/name: online-bank-disaster-recovery
     spec:
       imagePullSecrets:
         - name: ghcr-pull-secret    
@@ -96,6 +96,6 @@ spec:
       volumes:
         - name: data
           persistentVolumeClaim:
-            claimName: online-bank-data-disaster recovery
+            claimName: online-bank-data-disaster-recovery
         - name: tmp
           emptyDir: {}

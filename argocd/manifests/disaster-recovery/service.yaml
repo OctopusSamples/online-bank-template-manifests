@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: online-bank-disaster recovery
+  name: online-bank-disaster-recovery
   labels:
-    app.kubernetes.io/name: online-bank-disaster recovery
+    app.kubernetes.io/name: online-bank-disaster-recovery
 spec:
   type: ClusterIP
   selector:
-    app.kubernetes.io/name: online-bank-disaster recovery
+    app.kubernetes.io/name: online-bank-disaster-recovery
   ports:
     - name: http
       port: 80
