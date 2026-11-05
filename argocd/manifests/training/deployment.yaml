@@ -29,7 +29,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: online-bank
-          image: ghcr.io/octopussamples/online-bank-template:latest
+          image: ghcr.io/octopussamples/online-bank-template:1.0.10
           imagePullPolicy: Always
           ports:
             - name: http
@@ -44,23 +44,23 @@ spec:
               value: /app/data
             # Must match the ingress host; used to build password reset links.
             - name: Bank__PublicOrigin
-              value: https://online-bank.example.com
+              value: online-bank.training.example.com
             - name: Branding__Name
-              value: Online Bank
+              value: Oxford Drake Credit Union
             - name: Branding__ShortName
-              value: Online
+              value: ODCU
             - name: Branding__LogoUrl
-              value: ""
+              value: 
             - name: Branding__PrimaryColor
               value: "#176a67"
             - name: Branding__SupportEmail
-              value: support@example.test
+              value: support@oxforddrakecu.com
             - name: Branding__SupportPhone
               value: 800-555-0100
             - name: Branding__WebsiteUrl
-              value: https://example.test
+              value: https://online-bank.training.example.com/
             - name: Branding__LegalName
-              value: Online Bank Demo
+              value: Oxford Drake Credit Union
             - name: Branding__DemoNotice
               value: Demonstration only. No real money.
           volumeMounts:
