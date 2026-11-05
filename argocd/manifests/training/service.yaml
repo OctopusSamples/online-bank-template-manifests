@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: online-bank-training
+  labels:
+    app.kubernetes.io/name: online-bank-training
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: online-bank-training
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+      protocol: TCP
