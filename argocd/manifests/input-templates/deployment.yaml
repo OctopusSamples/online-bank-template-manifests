@@ -41,28 +41,28 @@ spec:
             - name: ASPNETCORE_HTTP_PORTS
               value: "8080"
             - name: Bank__DataDirectory
-              value: /app/data
+              value: #{Project.Env[Bank__DataDirectory]}
             # Must match the ingress host; used to build password reset links.
             - name: Bank__PublicOrigin
-              value: https://online-bank.example.com
+              value: #{Project.Env[Bank__PublicOrigin]}
             - name: Branding__Name
-              value: Online Bank
+              value: #{Project.Env[Branding__Name]}
             - name: Branding__ShortName
-              value: Online
+              value: #{Project.Env[Branding__ShortName]}
             - name: Branding__LogoUrl
-              value: ""
+              value: #{Project.Env[Branding__LogoUrl]}
             - name: Branding__PrimaryColor
-              value: "#176a67"
+              value: "#{Project.Env[Branding__PrimaryColor]}"
             - name: Branding__SupportEmail
-              value: support@example.test
+              value: #{Project.Env[Branding__SupportEmail]}
             - name: Branding__SupportPhone
-              value: 800-555-0100
+              value: #{Project.Env[Branding__SupportPhone]}
             - name: Branding__WebsiteUrl
-              value: https://example.test
+              value: #{Project.Env[Branding__WebsiteUrl]}
             - name: Branding__LegalName
-              value: Online Bank Demo
+              value: #{Project.Env[Branding__LegalName]}
             - name: Branding__DemoNotice
-              value: Demonstration only. No real money.
+              value: #{Project.Env[Branding__DemoNotice]}
           volumeMounts:
             - name: data
               mountPath: /app/data
