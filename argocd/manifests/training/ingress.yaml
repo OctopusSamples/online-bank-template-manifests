@@ -14,7 +14,7 @@ spec:
 #        - online-bank.example.com
       #secretName: online-bank-tls
   rules:
-    - host: online-bank.training.example.com
+    - host: online-bank.training.octopussamples.com
       http:
         paths:
           - path: /
