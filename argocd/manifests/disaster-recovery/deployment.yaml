@@ -44,7 +44,7 @@ spec:
               value: /app/data
             # Must match the ingress host; used to build password reset links.
             - name: Bank__PublicOrigin
-              value: online-bank.disaster-recovery.example.com
+              value: online-bank.disaster-recovery.octopussamples.com
             - name: Branding__Name
               value: Oxford Drake Credit Union
             - name: Branding__ShortName
@@ -58,7 +58,7 @@ spec:
             - name: Branding__SupportPhone
               value: 800-555-0100
             - name: Branding__WebsiteUrl
-              value: https://online-bank.disaster-recovery.example.com/
+              value: https://online-bank.disaster-recovery.octopussamples.com/
             - name: Branding__LegalName
               value: Oxford Drake Credit Union
             - name: Branding__DemoNotice
